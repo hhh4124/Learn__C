@@ -29,6 +29,7 @@ int main()
 */
 
 // 3. For 반복문 써보고 출력해보기
+/*
 int main()
 {
 	int i;
@@ -41,5 +42,27 @@ int main()
 	printf("%d\n", sum);
 	
 	return 0;
+}
+*/
+// 4. If 조건문 사용해보고 출력해보기
+int main()
+{
+	int numb;
+	printf("정수를 입력하세요. : ");
+	scanf("%d", &numb);
 	
+	if (numb > 0)
+	{
+		printf("양수입니다.\n");
+	}
+	else if (numb < 0)
+	{
+		printf("음수입니다.\n");	
+	}
+	else 
+	{
+		printf("0입니다. \n");
+	}
+	
+	return 0;
 }
