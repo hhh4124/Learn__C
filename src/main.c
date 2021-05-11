@@ -201,6 +201,7 @@ int main()
 // 부호 있는 정수 최댓값: INT8_MAX, INT16_MAX, INT32_MAX, INT64_MAX
 // 부호 없는 정수(unsigned) 최솟값: 0
 // 부호 없는 정수 최댓값: UINT8_MAX, UINT16_MAX, UINT32_MAX, UINT64_MAX
+/*
 int main()
 {
     int8_t num1 = -128;                    // 8비트(1바이트) 크기의 부호 있는 정수형 변수 선언
@@ -218,6 +219,40 @@ int main()
 
     // uint8_t, uint16_t, uint32_t는 %u로 출력하고 uint64_t는 %llu로 출력
     printf("%u %u %u %llu\n", num5, num6, num7, num8); // 255 65535 4294967295 18446744073709551615
+
+    return 0;
+}
+*/
+
+// 9. 실수형 변수 저장하기
+int main()
+{
+    float num1 = 0.1f;               // 단정밀도 부동소수점 변수를 선언하고 값을 할당
+                                     // float는 숫자 뒤에 f를 붙임
+
+    double num2 = 3867.215820;       // 배정밀도 부동소수점 변수를 선언하고 값을 할당
+                                     // double은 숫자 뒤에 아무것도 붙이지 않음
+
+    long double num3 = 9.327513l;    // 배정밀도 부동소수점 변수를 선언하고 값을 할당
+                                     // long double은 숫자 뒤에 l을 붙임
+
+    // float와 double은 %f로 출력, long double은 %Lf로 출력
+    printf("%f %f %Lf\n", num1, num2, num3);    // 0.100000 3867.215820 9.327513
+	
+	num1 = 3.e5f;             // 지수 표기법으로 300000을 표기
+                        	  // float는 숫자 뒤에 f를 붙임
+ 
+    num2 = -1.3827e-2;       // 지수 표기법으로 -0.013827을 표기
+                             // double은 숫자 뒤에 아무것도 붙이지 않음
+
+    num3 = 5.21e+9l;    	 // 지수 표기법으로 5210000000을 표기
+                             // long double은 숫자 뒤에 l을 붙임
+
+    // float와 double은 %f로 출력, long double은 %Lf로 출력
+    printf("%f %f %Lf\n", num1, num2, num3); // 300000.000000 -0.013827 5210000000.000000
+
+    // 지수 표기법으로 출력할 때는 float와 double은 %e로 출력, long double은 %Le로 출력
+    printf("%e %e %Le\n", num1, num2, num3); // 3.000000e+05 -1.382700e-02 5.210000e+09
 
     return 0;
 }
