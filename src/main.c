@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 
 /* 
 #include는 전처리기를 의미.
@@ -117,7 +118,8 @@ int main()
 */
 
 // 6. 자료형 크기 구하기. size of 명령어
-
+// 아마 맥북 64bit라 long은 8byte인거 같다.
+/*
 int main()
 {
 	int num1 = 0;
@@ -143,4 +145,46 @@ int main()
 	printf("사이즈: %d\n", size);
 	
 	return 0;
+}
+*/
+
+// 7. 자료형의 최솟값, 최댓값, 오버플로우, 언더플로우 
+// #include <limis.h>가 필요
+
+int main()
+{
+    char num1 = CHAR_MIN;          // char의 최솟값
+    short num2 = SHRT_MIN;         // short의 최솟값
+    int num3 = INT_MIN;            // int의 최솟값
+    long num4 = LONG_MIN;          // long의 최솟값
+    long long num5 = LLONG_MIN;    // long long의 최솟값
+
+    // char, short, int는 %d로 출력하고 long은 %ld로 출력, long long은 %lld로 출력
+    printf("%d %d %d %ld %lld\n", num1, num2, num3, num4, num5);
+    // -128 -32768 -2147483648 -2147483648 -9223372036854775808
+
+	num1 = CHAR_MIN - 1;          // char의 최솟값 -1 => 언더플로우 발생 = 최댓값
+    num2 = SHRT_MIN - 1;         // short의 최솟값 -1 => 언더플로우 발생 = 최댓값
+    num3 = INT_MIN - 1;            // int의 최솟값 -1 => 언더플로우 발생 = 최댓값
+    num4 = LONG_MIN - 1;          // long의 최솟값 -1 => 언더플로우 발생 = 최댓값
+    num5 = LLONG_MIN - 1;    // long long의 최솟값 -1 => 언더플로우 발생 = 최댓값
+	
+	printf("%d %d %d %ld %lld\n", num1, num2, num3, num4, num5);
+	
+	char num6 = CHAR_MAX;          // char의 최댓값
+    short num7 = SHRT_MAX;         // short의 최댓값
+    int num8 = INT_MAX;            // int의 최댓값
+    long num9 = LONG_MAX;    // long long의 최댓값
+	
+	printf("%d %d %d %ld\n", num6, num7, num8, num9);
+	
+	
+	num6 = CHAR_MAX + 1;          // char의 최댓값보다 큰 수를 할당. 오버플로우 발생
+    num7 = SHRT_MAX + 1;         // short의 최댓값보다 큰 수를 할당. 오버플로우 발생
+    num8 = INT_MAX + 1;            // int의 최댓값보다 큰 수를 할당. 오버플로우 발생
+    num9 = LONG_MAX + 1;    // long long의 최댓값보다 큰 수를 할당. 오버플로우 발생
+	
+	printf("%d %d %d %ld\n", num6, num7, num8, num9);
+	
+    return 0;
 }
