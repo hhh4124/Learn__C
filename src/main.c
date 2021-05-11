@@ -87,6 +87,7 @@ int main()
 // 그렇지만 최근 컴퓨터 개념인 32bit, 64bit외 다른 하드웨어나 구식 컴퓨터에서는 다를 수 있으니 참조.
 // C언어는 오래되었고, 여러가지 하드웨어에서 사용하기 때문에 운영체제 bit에 따라 달라질 수 있다고 한다.
 // JAVA언어에서는 long은 8byte 취급.
+/*
 int main()
 {
 	char char_number = -10; // 1byte = 8bit = -128 ~ 127
@@ -111,5 +112,35 @@ int main()
 	
 	printf("%d %d", number1, number2);
 		
+	return 0;
+}
+*/
+
+// 6. 자료형 크기 구하기. size of 명령어
+
+int main()
+{
+	int num1 = 0;
+	long num2 = 0;
+	long long num3 = 0;
+	char num4 = 0;
+	short num5 = 0;
+	int size;
+	
+	size = sizeof num1;
+	printf("사이즈: %d\n", size);
+	
+	size = sizeof num2;
+	printf("사이즈: %d\n", size);
+	
+	size = sizeof num3;
+	printf("사이즈: %d\n", size);
+	
+	size = sizeof num4;
+	printf("사이즈: %d\n", size);
+	
+	size = sizeof num5;
+	printf("사이즈: %d\n", size);
+	
 	return 0;
 }
