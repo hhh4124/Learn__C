@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <limits.h>
+#include <stdint.h>
 
 /* 
 #include는 전처리기를 의미.
@@ -150,7 +151,10 @@ int main()
 
 // 7. 자료형의 최솟값, 최댓값, 오버플로우, 언더플로우 
 // #include <limis.h>가 필요
-
+// 언뜻보면 오버플로우 문제는 발생하기 힘들 것 같지만, 
+// 게임, 유튜브 처럼 대규모 인원이 장기간 사용하는 경우 오버플로우가 가끔 발생함.
+// 실제 유튜브에서도 조회수가 21억을 초과하여 음수로 나온 오류가 있었음.
+/*
 int main()
 {
     char num1 = CHAR_MIN;          // char의 최솟값
@@ -186,5 +190,34 @@ int main()
 	
 	printf("%d %d %d %ld\n", num6, num7, num8, num9);
 	
+    return 0;
+}
+*/
+
+// 8. stdint 사용하여 비트 단위로 표시하기
+// 운영체제별로 int, long 등이 바뀌고 모호해지니 비트를 숫자로 표기하는 stdint 사용해보기
+// 최솟값, 최댓값도 사용 가능.
+// 부호 있는 정수(signed) 최솟값: INT8_MIN, INT16_MIN, INT32_MIN, INT64_MIN
+// 부호 있는 정수 최댓값: INT8_MAX, INT16_MAX, INT32_MAX, INT64_MAX
+// 부호 없는 정수(unsigned) 최솟값: 0
+// 부호 없는 정수 최댓값: UINT8_MAX, UINT16_MAX, UINT32_MAX, UINT64_MAX
+int main()
+{
+    int8_t num1 = -128;                    // 8비트(1바이트) 크기의 부호 있는 정수형 변수 선언
+    int16_t num2 = 32767;                  // 16비트(2바이트) 크기의 부호 있는 정수형 변수 선언 
+    int32_t num3 = 2147483647;             // 32비트(4바이트) 크기의 부호 있는 정수형 변수 선언
+    int64_t num4 = 9223372036854775807;    // 64비트(8바이트) 크기의 부호 있는 정수형 변수 선언
+
+    // int8_t, int16_t, int32_t는 %d로 출력하고 int64_t는 %lld로 출력
+    printf("%d %d %d %lld\n", num1, num2, num3, num4); // -128 32767 2147483647 9223372036854775807
+
+    uint8_t num5 = 255;                      // 8비트(1바이트) 크기의 부호 없는 정수형 변수 선언
+    uint16_t num6 = 65535;                   // 16비트(2바이트) 크기의 부호 없는 정수형 변수 선언
+    uint32_t num7 = 4294967295;              // 32비트(4바이트) 크기의 부호 없는 정수형 변수 선언
+    uint64_t num8 = 18446744073709551615;    // 64비트(8바이트) 크기의 부호 없는 정수형 변수 선언
+
+    // uint8_t, uint16_t, uint32_t는 %u로 출력하고 uint64_t는 %llu로 출력
+    printf("%u %u %u %llu\n", num5, num6, num7, num8); // 255 65535 4294967295 18446744073709551615
+
     return 0;
 }
