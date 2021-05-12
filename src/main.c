@@ -225,6 +225,7 @@ int main()
 */
 
 // 9. 실수형 변수 저장하기
+/*
 int main()
 {
     float num1 = 0.1f;               // 단정밀도 부동소수점 변수를 선언하고 값을 할당
@@ -253,6 +254,39 @@ int main()
 
     // 지수 표기법으로 출력할 때는 float와 double은 %e로 출력, long double은 %Le로 출력
     printf("%e %e %Le\n", num1, num2, num3); // 3.000000e+05 -1.382700e-02 5.210000e+09
+
+    return 0;
+}
+*/
+// Switch 문 알아보기. 다수의 상황에서는 If 문 보다 간편하게 처리할 수 있다.
+int main()
+{
+    int num1;
+
+	printf("숫자를 입력하세요: ");
+    scanf("%d", &num1);    // 값을 입력받음
+
+    switch (num1)   // num1의 값에 따라 분기
+    {
+    case 1:         // 1일 때
+        printf("1입니다.\n");
+        break;
+    case 2:         // 2일 때
+        printf("2입니다.\n");
+        break;
+	case 3:     // 3일 때
+        printf("3입니다.\n");
+        break;
+	case 4 ... 100: // 4 ~ 100 범위
+        printf("4 ~ 100입니다.\n");
+        break;
+	case -100 ... -1: // -100 ~ -1 범위
+        printf("-100 ~ -1입니다.\n");
+        break;
+    default:        // 아무 case에도 해당되지 않을 때
+        printf("예외입니다.\n");
+        break;
+    }
 
     return 0;
 }
