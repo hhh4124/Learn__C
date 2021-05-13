@@ -296,6 +296,7 @@ int main()
 */
 
 // While 반복문 알아보기.
+/*
 int main()
 {
     int i = 0;
@@ -307,3 +308,24 @@ int main()
 
     return 0;
 }
+*/
+
+// While 반복문으로 원하는 횟수만큼 반복하기
+
+int main()
+{
+	int count;
+	
+	printf("원하는 반복횟수를 입력하세요:\n");
+	scanf("%d", &count);
+	
+	int i = 0;
+	
+	while(i < count)
+	{
+		printf("%d회 반복합니다. 현재 %d회 \n", count, i+1);
+		i++;
+	}
+	return 0;
+}
+
