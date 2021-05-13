@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <limits.h>
 #include <stdint.h>
+#include <stdlib.h>    // srand, rand 함수가 선언된 헤더 파일
+#include <time.h>      // time 함수가 선언된 헤더 파일
+
 
 /* 
 #include는 전처리기를 의미.
@@ -311,7 +314,7 @@ int main()
 */
 
 // While 반복문으로 원하는 횟수만큼 반복하기
-
+/*
 int main()
 {
 	int count;
@@ -328,4 +331,20 @@ int main()
 	}
 	return 0;
 }
+*/
 
+// 무작위 While 반복문 
+
+int main()
+{
+	srand(time(NULL)); //시간 값으로 시간 설정, rand함수 초깃값으로 주로 사용
+	
+	int i = 0;
+	while(i != 1) //While 1이 아닐 때 까지 반복, while은 항상 false까지 반복
+	{
+		i = rand() % 100; // 설정한 숫자 미만의 숫자만 나옴
+		printf("%d\n", i);
+	}
+	
+	return 0;
+}
