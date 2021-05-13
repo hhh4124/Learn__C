@@ -259,6 +259,9 @@ int main()
 }
 */
 // Switch 문 알아보기. 다수의 상황에서는 If 문 보다 간편하게 처리할 수 있다.
+// 안타깝게도 범위는 Visual studio에서는 사용할 수 없다고 한다.
+// 그럴 때는 break를 생략해서 여러 케이스를 한번에 처리할 수 있다.
+/*
 int main()
 {
     int num1;
@@ -286,6 +289,20 @@ int main()
     default:        // 아무 case에도 해당되지 않을 때
         printf("예외입니다.\n");
         break;
+    }
+
+    return 0;
+}
+*/
+
+// While 반복문 알아보기.
+int main()
+{
+    int i = 0;
+    while (i < 100)    // i가 100보다 작을 때 반복. 0에서 99까지 증가하면서 100번 반복
+    {
+        printf("Hello, world!\n");
+        i++;           // i를 1씩 증가시킴
     }
 
     return 0;
