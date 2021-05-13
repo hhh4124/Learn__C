@@ -334,7 +334,7 @@ int main()
 */
 
 // 무작위 While 반복문 
-
+/*
 int main()
 {
 	srand(time(NULL)); //시간 값으로 시간 설정, rand함수 초깃값으로 주로 사용
@@ -346,5 +346,50 @@ int main()
 		printf("%d\n", i);
 	}
 	
+	return 0;
+}
+*/
+
+// 로또 번호 추첨기
+
+int main()
+{
+	printf("랜덤 로또 번호 추첨기입니다.\n");
+	
+	int i;
+	int j;
+	int k;
+	int temp;
+	int random_num;
+	int result[6];
+		
+	srand(time(NULL));
+	
+	for(i=0; i<6; i++)
+	{
+		random_num = rand() % 46;
+		result[i] = random_num;
+	}
+	
+	
+	for(j=0; j<6; j++)
+	{
+		for(k=0; k<5; k++)
+		{
+			if(result[k] > result[k+1])
+			{
+				temp = result[k];
+				result[k] = result[k+1];
+				result[k+1] = temp;
+			}
+		}
+	}
+	
+	printf("추첨 결과\n");
+	
+	for(j=0; j<6; j++)
+	{
+		printf("%d ", result[j]);
+	}
 	return 0;
 }
