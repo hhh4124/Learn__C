@@ -351,7 +351,7 @@ int main()
 */
 
 // 로또 번호 추첨기
-
+/*
 int main()
 {
 	printf("랜덤 로또 번호 추첨기입니다.\n");
@@ -392,4 +392,29 @@ int main()
 		printf("%d ", result[j]);
 	}
 	return 0;
-}
+}*/
+
+/* CPU가 일하는 방법!
+
+1. 프로그램이 시작되는 과정
+  - PC를 부팅하면 OS, 즉 운영체제가 동작한다.
+    운영체제는 보조기억장치(HDD, SSD)에 저장이 되어있는데
+	주기억장치가 보조기억장치에 있는 데이터를 읽어 CPU와 같이 연산하여 프로그램을 가동시킨다.
+	즉 CPU는 보조기억장치와는 소통하지 않고, 주기억장치 RAM과 함께 소통하며 일을 한다.
+	메모리는 주소별로 나누어져 있고 주소마다 메모리 값이 할당되는데, 
+	CPU는 이 주소를 이용해서 메모리 데이터를 읽고 쓴다.
+	
+	CPU는 Control Unit, ALU Arithmetic Logic Unit, 그리고 Contol Unit과 ALU를 연결하는 Control BUS가 있다.
+	그리고 Program Counter, Current Instruction Resgister, Memory Address Register
+	Memory Data Resister, Accumulator가 있다.
+	
+	아래의 과정은 Control Unit이 제어함.
+	1. Program Counter는 CPU가 실행시켜야할 다음 번 명령어의 주소를 가르킴
+	   CPU의 시작점임.
+	   
+	2. Program Counter에서 Memory Address Register로 주소값을 넘김.
+	   즉, Program Counter에 주소값을 할당되어도 바로 ALU가처리하는게 아님
+	
+	3. Memory Address Register에서 주소를 받으면 Memory Data Register에서 메모리에 저장된 값을 읽음
+	4. 
+	
