@@ -408,13 +408,65 @@ int main()
 	그리고 Program Counter, Current Instruction Resgister, Memory Address Register
 	Memory Data Resister, Accumulator가 있다.
 	
-	아래의 과정은 Control Unit이 제어함.
+	아래의 과정은 Control Unit이 총괄 제어함.
 	1. Program Counter는 CPU가 실행시켜야할 다음 번 명령어의 주소를 가르킴
 	   CPU의 시작점임.
 	   
 	2. Program Counter에서 Memory Address Register로 주소값을 넘김.
 	   즉, Program Counter에 주소값을 할당되어도 바로 ALU가처리하는게 아님
+	   예를들어 메모리에 100이라는 주소값을 저장
 	
 	3. Memory Address Register에서 주소를 받으면 Memory Data Register에서 메모리에 저장된 값을 읽음
-	4. 
+	   100이라는 주소의 메모리 값을 읽음 LOAD 10이라는 데이터라고 가정
+	
+	4. Memory Data Register에서 읽은 값을 다시 Current Instruction Register로 옮김
+	   Current Instruction Register에는 LOAD 10이라는 데이터가 저장됨
+	
+	5. Program Counter에서 다음 명령 주소 값을 받음, Current Instruction Register가 실행되기 전에
+	   다음 명령어 주소 값을 받음
+	   예를들어 100이라는 주소값을 지우고 새로 101번 주소를 받음
+	   
+	6. Current Instruction Register의 값을 Control Unit에서 읽고 해석함. 
+	   예를 들어 주소 100, Load 10이라는 명령을 받았으면, Load 10을 해석
+	
+	7. CU에서 Load 10을 해석했음. 다시 Memory Address Register에서 10주소 값을 할당.
+	
+	8. Memory Data Register에 10이라는 주소를 새로 저장.
+	
+	9. Memory Data Register에 10이라는 주소에 있는 메모리의 값을 저장. 예를들어 A라는 데이터 받아왔다고 생각.
+	
+	10. Accumulator에 A라는 데이터를 저장. 아까는 명령어 였기 때문에 Current Instruction Register로
+	    갔지만, 이번에는 명령어를 해석하고 값을 가져오기 때문에 실행을 해야하기 때문에, Accumulator로 감
+		
+	11. Program Counter 에서 	Memory Address Register... 해서 1번 이후 과정을 다시 반복함.
+		이번에는 B라는 값을 받아온다고 가정
+		
+	12. Accumulator에서 ALU로 실행 값을 이동. A라는 데이터가 ALU에 저장됨.
+	
+	13. 아까 과정을 다시 반복해서 Accumulator에 다음 값인 B가 저장됨.
+	
+	14. ALU에서 ADD 연산을 함. 이전값과 다음값을 읽어서 연산 수행.
+	    A + B 수행
+	
+	15. A + B, 즉연산 결과를 다시 Accumulator에 저장.
+	
+	16. 또 Program Counter에 있던 그 다음 명령어를 다시 수행... 앞 과정 반복...
+		마지막에 저장하라는 명령어가 떨어짐.
+	
+	17. 저장명령어가 떨어지면 기존처럼 Memory Address Register값이 Memory Data Register로 가는게 아니라,
+	    Accumulator에 들어있는 저장값을 Memory Data Register에 저장. A + B값이 Data Register에 저장되는 것
+		
+	18. Memory Data Register가 저장 명령이 떨어진 주소 값에 메모리값 할당.
+		A + B값 할당.
+		
+	이러한 과정을 통해서, 우리가 프로그래밍으로 아주 간단하게 수행하는, 변수 덧셈 계산이 완료됨
+	
+	A = 1, B = 2, C = A+B라는 연산을 했다치면 위에 과정을 통해 CPU각 연산.
+	A 라는 변수에 저장된 값을 불러오고, B라는 변수의 값도 불러온 이후 연산,
+	C라는 값에 연산 결과를 저장하는 과정.
+	간단한 연산도 CPU에서는 이러한 과정을 통해서 일을 함.
+	이런 내용을 모르더라도 프로그래밍을 할 수 있지만, 이런 원리를 이해하면 나중에 도움이 될 것임.
+	
+	
+	
 	
