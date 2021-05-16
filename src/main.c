@@ -469,45 +469,9 @@ int main()
 	
 	*/
 
-// 갑자기 구구단 프로그램이 만들고 싶어짐
-/*
-int main()
-{
-	int num1, num2;
-	int result;
-	
-	printf("구구단 프로그램 입니다.\n");
-	printf("10 이하의 숫자 두 개를 입력해주세요. : \n");
-	
-	scanf("%d", &num1);
-	scanf("%d", &num2);
-	
-	if (num1 < 10 && num1 > 0)
-	{
-		if (num2 < 10 && num2 > 0)
-		{
-			result = num1 * num2;
-			printf("%d 입니다.\n", result);
-			
-			return 0;
-		}
-		
-		else
-		{
-			printf("정상적인 값을 입력해주세요.")
-			return 0;
-		}
-	}	
-	else
-	{
-		printf("정상적인 값을 입력해주세요.")
-		return 0;
-	}
-	
-	return 0;
-}
-*/
 
+// If로 숫자크기 비교해보기.
+/*
 int main()
 {
     int num1;
@@ -535,4 +499,27 @@ int main()
  
     return 0;
 }
+*/
 	
+// 갑자기 구구단 프로그램이 만들고 싶어짐
+
+int main()
+{
+	int num1, num2;
+	int result;
+	
+	printf("2개 숫자 곱셈 프로그램 입니다.\n");
+	printf("숫자 두 개를 입력해주세요. : \n");
+	
+	printf("첫번째 숫자\n");
+	scanf("%d", &num1);
+	
+	printf("두번째 숫자\n");
+	scanf("%d", &num2);
+	
+	result = num1 * num2;
+	
+	printf("%d 입니다.", result);
+
+	return 0;
+}
