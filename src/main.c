@@ -467,6 +467,72 @@ int main()
 	간단한 연산도 CPU에서는 이러한 과정을 통해서 일을 함.
 	이런 내용을 모르더라도 프로그래밍을 할 수 있지만, 이런 원리를 이해하면 나중에 도움이 될 것임.
 	
+	*/
+
+// 갑자기 구구단 프로그램이 만들고 싶어짐
+/*
+int main()
+{
+	int num1, num2;
+	int result;
 	
+	printf("구구단 프로그램 입니다.\n");
+	printf("10 이하의 숫자 두 개를 입력해주세요. : \n");
 	
+	scanf("%d", &num1);
+	scanf("%d", &num2);
+	
+	if (num1 < 10 && num1 > 0)
+	{
+		if (num2 < 10 && num2 > 0)
+		{
+			result = num1 * num2;
+			printf("%d 입니다.\n", result);
+			
+			return 0;
+		}
+		
+		else
+		{
+			printf("정상적인 값을 입력해주세요.")
+			return 0;
+		}
+	}	
+	else
+	{
+		printf("정상적인 값을 입력해주세요.")
+		return 0;
+	}
+	
+	return 0;
+}
+*/
+
+int main()
+{
+    int num1;
+	
+	printf("아무 숫자나 입력 해주세요.\n");
+	scanf("%d", &num1);
+ 
+    if (num1 == 10)    // num1이 10과 같은지 검사
+        printf("10입니다.\n");
+ 
+    if (num1 != 5)     // num1이 5와 다른지 검사
+        printf("5가 아닙니다.\n");
+ 
+    if (num1 > 10)     // num1이 10보다 큰지 검사
+        printf("10보다 큽니다.\n");
+ 
+    if (num1 < 10)     // num1이 10보다 작은지 검사
+        printf("10보다 작습니다.\n");
+ 
+    if (num1 >= 10)    // num1이 10보다 크거나 같은지 검사
+        printf("10보다 크거나 같습니다.\n");
+ 
+    if (num1 <= 10)    // num1이 10보다 작거나 같은지 검사
+        printf("10보다 작거나 같습니다.\n");
+ 
+    return 0;
+}
 	
