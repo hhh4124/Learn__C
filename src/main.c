@@ -502,7 +502,7 @@ int main()
 */
 	
 // 갑자기 구구단 프로그램이 만들고 싶어짐
-
+/*
 int main()
 {
 	int num1, num2;
@@ -523,3 +523,5 @@ int main()
 
 	return 0;
 }
+*/
+
