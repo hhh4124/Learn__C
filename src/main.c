@@ -588,7 +588,9 @@ int main()
 }
 */
 
+
 //구구단 소환 
+/*
 int main()
 {
 	int number, result;
@@ -606,7 +608,7 @@ int main()
 	}
 	
 	// while문 이용하기
-	/*
+	
 	printf("결과입니다\n");
 	while(i!=10)
 	{
@@ -615,7 +617,25 @@ int main()
 		
 		i++;
 	}
-	*/
+	
 	
 	return 0;//for을 이용하던 while을 이용하던 결과는 같다.
+}
+*/
+	
+// do while문 사용해보기
+int main()
+{
+    int count;
+
+    scanf("%d", &count);    // 값을 입력받음
+
+    int i = 0;
+    do // 처음 한 번은 아래 코드가 실행됨
+    {
+        printf("Hello, world! %d\n", i);    // Hello, world!와 i의 값을 함께 출력
+        i++;                                // i를 1씩 증가시킴
+    } while (i < count);                    // i가 count보다 작을 때 반복
+
+    return 0;
 }
