@@ -645,6 +645,7 @@ int main()
 
 
 //아스키 코드 출력해보기
+/*
 int main()
 {
 	int number;
@@ -654,5 +655,45 @@ int main()
 	
 	printf("ASCII: %c\n int: %d\n", number, number);
 	
+	return 0;
+}
+*/
+
+// Up Down Game 만들어보기
+
+int main(){
+	//컴퓨터가 1~100 랜덤 값 지정
+	//사용자가 랜덤한 숫자 입력하면 컴퓨터가 Up or Down 출력
+	//사용자가 몇번만에 Up Down 성공했는지 알 수 있음
+	//이터널시티 큐브 처럼
+	
+	int com, player;
+	int count = 0;
+	
+	printf("컴퓨터가 1~100사이 랜덤한 값을 지정합니다. 최대한 빨리 맞춰보세요!\n");
+	
+	srand(time(NULL));
+	com = rand() % 100 + 1;
+	
+	while(1)
+	{
+	
+	scanf("%d", &player);
+	count++;
+		
+		if(player<com)
+		{
+			printf("Up\n");
+		}
+		else if (player>com)
+		{
+			printf("Down\n");
+		}
+		else
+		{
+			printf("%d번 만에 맞췄습니다. 축하합니다.\n", count);
+			break;
+		}
+	}
 	return 0;
 }
