@@ -624,6 +624,7 @@ int main()
 */
 	
 // do while문 사용해보기
+/*
 int main()
 {
     int count;
@@ -638,4 +639,20 @@ int main()
     } while (i < count);                    // i가 count보다 작을 때 반복
 
     return 0;
+}
+*/
+
+
+
+//아스키 코드 출력해보기
+int main()
+{
+	int number;
+	
+	printf("아무 숫자나 입력해보세요\n");
+	scanf("%d", &number);
+	
+	printf("ASCII: %c\n int: %d\n", number, number);
+	
+	return 0;
 }
