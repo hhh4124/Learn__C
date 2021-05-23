@@ -3,6 +3,8 @@
 #include <stdint.h>
 #include <stdlib.h>    // srand, rand 함수가 선언된 헤더 파일
 #include <time.h>      // time 함수가 선언된 헤더 파일
+//#include <windows.h>    // sleep() 함수 사용을 위해 추가했으나 리눅스에서는 windows.h 가 없음, 오류 뜸
+#include <unistd.h> // 리눅스에서 sleep함수 사용, sleep(seconds), usleep(micro seconds)
 
 
 /* 
@@ -568,4 +570,52 @@ HIGH LEVEL의 대표적인 것이 Python임
 C언어로 이식하여 간편함과 빠른 속도를 보장함
 
 C언어를 배우다 보면 컴퓨터 구조를 이해할 수 있게 됨
+*/
 
+// I am Iron man 대기 함수, 유용하게 쓰일 듯
+/*
+int main()
+{
+	printf("I..\n");
+	sleep(2); //windows.h 에서는 밀리 세컨즈, 리눅스 unistd.h 에서는 세컨즈.. 헷갈리면 안댐
+	printf("am...\n");
+	sleep(1);
+	printf("Iron man!\n");
+	sleep(1.3223); //소수점도 문제없이 되는 것을 확인
+	printf("hahaha\n");
+	
+	return 0;
+}
+*/
+
+//구구단 소환 
+int main()
+{
+	int number, result;
+	int i = 1;
+	
+	
+	printf("구구단 프로그램입니다. 원하시는 단 수를 입력해주세요\n");
+	scanf("%d", &number);
+	
+	//for문 이용하기
+	for (i=1; i<=9; i++)
+	{
+		result = number * i;
+		printf("%d * %d = %d\n", number, i, result);
+	}
+	
+	// while문 이용하기
+	/*
+	printf("결과입니다\n");
+	while(i!=10)
+	{
+		result = number * i;
+		printf("%d * %d = %d\n", number, i, result);
+		
+		i++;
+	}
+	*/
+	
+	return 0;//for을 이용하던 while을 이용하던 결과는 같다.
+}
