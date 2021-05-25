@@ -660,7 +660,7 @@ int main()
 */
 
 // Up Down Game 만들어보기
-
+/*
 int main(){
 	//컴퓨터가 1~100 랜덤 값 지정
 	//사용자가 랜덤한 숫자 입력하면 컴퓨터가 Up or Down 출력
@@ -670,10 +670,10 @@ int main(){
 	int com, player;
 	int count = 0;
 	
-	printf("컴퓨터가 1~100사이 랜덤한 값을 지정합니다. 최대한 빨리 맞춰보세요!\n");
+	printf("컴퓨터가 1~10000사이 랜덤한 값을 지정합니다. 최대한 빨리 맞춰보세요!\n");
 	
 	srand(time(NULL));
-	com = rand() % 100 + 1;
+	com = rand() % 10000 + 1;
 	
 	while(1)
 	{
@@ -694,6 +694,29 @@ int main(){
 			printf("%d번 만에 맞췄습니다. 축하합니다.\n", count);
 			break;
 		}
+	}
+	return 0;
+}
+*/
+
+// 홀짝 판별기
+#include <stdio.h>
+int main() {
+	int num;
+	int judge;
+	
+	printf("홀짝판별을 위한 자연수를 입력해주세요.\n");
+	scanf("%d", &num);
+	
+	judge = num % 2;
+	
+	if (judge == 0)
+	{
+		printf("even\n");
+	}
+	else if (judge == 1)
+	{
+		printf("odd\n");
 	}
 	return 0;
 }
