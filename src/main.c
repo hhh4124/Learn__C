@@ -700,6 +700,7 @@ int main(){
 */
 
 // 홀짝 판별기
+/*
 #include <stdio.h>
 int main() {
 	int num;
@@ -717,6 +718,43 @@ int main() {
 	else if (judge == 1)
 	{
 		printf("odd\n");
+	}
+	return 0;
+}
+*/
+
+
+// 국어 수학 영어 3개 과목 시험 점수 평균 및 등급 구하기
+
+int main() {
+	
+	int korean, math, english;
+	float sum, avarage;
+	
+	scanf("%d %d %d", &korean, &math, &english);
+	
+	sum = korean + math + english;
+	avarage = sum / 3;
+	
+	if (avarage >= 90)
+	{
+		printf("%.2f A", avarage);
+	}
+	else if (avarage >= 80)
+	{
+		printf("%.2f B", avarage);
+	}
+	else if (avarage >= 70)
+	{
+		printf("%.2f C", avarage);
+	}
+		else if (avarage >= 60)
+	{
+		printf("%.2f D", avarage);
+	}
+		else
+	{
+		printf("%.2f F", avarage);
 	}
 	return 0;
 }
