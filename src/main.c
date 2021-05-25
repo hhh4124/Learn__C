@@ -725,7 +725,7 @@ int main() {
 
 
 // 국어 수학 영어 3개 과목 시험 점수 평균 및 등급 구하기
-
+/*
 int main() {
 	
 	int korean, math, english;
@@ -755,6 +755,29 @@ int main() {
 		else
 	{
 		printf("%.2f F", avarage);
+	}
+	return 0;
+}
+*/
+
+// 3의 배수는 X로 출력하기
+
+int main() {
+	int i, number, three_multiple;
+	
+	scanf("%d", &number);
+	
+
+	for(i=1; i<=number; i++)
+	{
+		if (i % 3 == 0)
+		{
+			printf("X ");
+		}
+		else
+		{
+		printf("%d ", i);
+		}
 	}
 	return 0;
 }
