@@ -785,6 +785,16 @@ int main() {
 
 // 함수 써보기
 int i=0;
+
+void say_hello(void);
+
+int main()
+{
+	say_hello();	
+	
+	return 0;
+}
+
 void say_hello(void)
 {
 	while(1)
@@ -794,11 +804,4 @@ void say_hello(void)
 			break;
 		printf("Hello! %d\n", i);
 	}
-}
-
-int main()
-{
-	say_hello();	
-	
-	return 0;
 }
