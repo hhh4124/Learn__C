@@ -786,7 +786,7 @@ int main() {
 // 함수 써보기
 int i=0;
 
-void say_hello(void);
+void say_hello(void); // function declaration, prototyping
 
 int main()
 {
@@ -795,7 +795,7 @@ int main()
 	return 0;
 }
 
-void say_hello(void)
+void say_hello(void) // function definition
 {
 	while(1)
 	{
