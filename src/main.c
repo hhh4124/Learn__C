@@ -761,7 +761,7 @@ int main() {
 */
 
 // 3의 배수는 X로 출력하기
-
+/*
 int main() {
 	int i, number, three_multiple;
 	
@@ -780,4 +780,23 @@ int main() {
 		}
 	}
 	return 0;
+}
+*/
+
+// 함수 써보기
+int i=0;
+void say_hello(void)
+{
+	while(1)
+	{
+		i++;
+		if(i==10)
+			break;
+		printf("Hello! %d\n", i);
+	}
+}
+
+int main()
+{
+	say_hello();	
 }
