@@ -790,7 +790,7 @@ void say_hello(void)
 	while(1)
 	{
 		i++;
-		if(i==10)
+		if(i==11)
 			break;
 		printf("Hello! %d\n", i);
 	}
@@ -799,4 +799,6 @@ void say_hello(void)
 int main()
 {
 	say_hello();	
+	
+	return 0;
 }
