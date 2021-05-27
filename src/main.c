@@ -810,7 +810,7 @@ void say_hello(void) // function definition
 
 
 //진법 변환 해보기
-
+/*
 int main() {
 
 	int data = 0b11111111000;
@@ -826,4 +826,20 @@ int main() {
 	printf("%d\n", data);
 	
 	return 0;	
+}
+*/
+
+//부동소수점 오차
+
+int main() 
+{
+	int i;
+	float num=0;
+	
+	for(i=0; i<100; i++)
+		num +=0.1;
+	
+	printf("%f\n", num);
+	
+	return 0;
 }
