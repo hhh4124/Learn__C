@@ -829,8 +829,8 @@ int main() {
 }
 */
 
-//부동소수점 오차
-
+//부동소수점 오차, 컴퓨터가 실수를 표현할 때 생기는 오차. 컴퓨터가 실수를 저장하는 방식에 따른 근본적인 문제.
+/*
 int main() 
 {
 	int i;
@@ -840,6 +840,23 @@ int main()
 		num +=0.1;
 	
 	printf("%f\n", num);
+	
+	return 0;
+}
+*/
+
+// 비트연산 해보기
+
+int main()
+{
+	int num1, num2;
+	
+	num1 = 77;
+	num2 = 25;
+	
+	printf("%d %d %d\n", num1 & num2, num1 | num2, num1 ^ num2);
+	
+	printf("%d %d %.d\n", ~num1+1, num1<<3, num2>>3);
 	
 	return 0;
 }
