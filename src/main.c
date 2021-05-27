@@ -784,6 +784,7 @@ int main() {
 */
 
 // 함수 써보기
+/*
 int i=0;
 
 void say_hello(void); // function declaration, prototyping
@@ -804,4 +805,25 @@ void say_hello(void) // function definition
 			break;
 		printf("Hello! %d\n", i);
 	}
+}
+*/
+
+
+//진법 변환 해보기
+
+int main() {
+
+	int data = 0b11111111000;
+	
+	printf("%d\n", data);
+	
+	data = 0xABCDE;
+		
+	printf("%d\n", data);
+	
+	data = 07345;
+	
+	printf("%d\n", data);
+	
+	return 0;	
 }
