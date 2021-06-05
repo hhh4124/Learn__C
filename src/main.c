@@ -877,6 +877,7 @@ int main()
 */
 
 // continue 이용해서 2의 배수와 3의 배수 제외하고 출력해보기
+/*
 int main()
 {
 	int num, i;
@@ -893,4 +894,24 @@ int main()
 	}
 	return 0;
 	
+}
+*/
+
+// 5의 배수 출력 해보기
+
+int main(){
+	int num, i;
+	
+	printf("양의 정수 값을 입력하세요: \n");
+	
+	scanf("%d", &num);
+	
+	for(i=0;i<=num;i++)
+	{
+		if(i%5!=0)
+			continue;
+		
+			printf("%d ", i);
+	}
+	return 0;
 }
