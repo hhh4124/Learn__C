@@ -865,7 +865,7 @@ int main()
 //상수 선언 해보기
 //상수는 대문자로만 표기하고 띄어쓰기는_ 언더바로 표기하는 것이 관례이다!
 // 그리고 선언과 동시에 초기화를 해야한다.
-
+/*
 int main()
 {
 	const int MY_AGE = 27;
@@ -873,4 +873,24 @@ int main()
 	printf("%d\n", MY_AGE);
 	
 	return 0;
+}
+*/
+
+// continue 이용해서 2의 배수와 3의 배수 제외하고 출력해보기
+int main()
+{
+	int num, i;
+	printf("양의 정수 값을 입력하세요:\n");
+	
+	scanf("%d", &num);
+	
+	for(i=0;i<=num;i++)
+	{
+		if(i%2==0 || i%3==0)
+			continue;
+		
+			printf("%d ", i);
+	}
+	return 0;
+	
 }
