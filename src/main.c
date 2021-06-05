@@ -846,17 +846,31 @@ int main()
 */
 
 // 비트연산 해보기
-
+/*
 int main()
 {
 	int num1, num2;
 	
 	num1 = 77;
-	num2 = 25;
+	num2 = -25;
 	
 	printf("%d %d %d\n", num1 & num2, num1 | num2, num1 ^ num2);
 	
-	printf("%d %d %.d\n", ~num1+1, num1<<3, num2>>3);
+	printf("%d %d %.d\n", ~num1+1, num1<<3, num2>>1);
+	
+	return 0;
+}
+*/
+
+//상수 선언 해보기
+//상수는 대문자로만 표기하고 띄어쓰기는_ 언더바로 표기하는 것이 관례이다!
+// 그리고 선언과 동시에 초기화를 해야한다.
+
+int main()
+{
+	const int MY_AGE = 27;
+	
+	printf("%d\n", MY_AGE);
 	
 	return 0;
 }
