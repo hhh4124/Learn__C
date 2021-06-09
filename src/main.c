@@ -899,6 +899,7 @@ int main()
 
 // 5의 배수 출력 해보기
 
+/*
 int main(){
 	int num, i;
 	
@@ -914,4 +915,28 @@ int main(){
 			printf("%d ", i);
 	}
 	return 0;
+}
+*/
+
+// 1이상 100미만의 정수 중에 7의 배수와 9의 배수를 출력하는 프로그램, 7의 배수이면서 동시에 9의 배수인 정수는 한번만 출력
+int main()
+{
+	int i, num;
+	
+	printf("1이상 100미만 정수 값을 입력하세요: \n");
+	
+	scanf("%d", &num);
+	
+	for(i=1; i<num; i++)
+	{
+		if(i%7 == 0)
+			printf("%d ", i);
+		
+		else if(i%9 == 0)
+			printf("%d ", i);
+		else
+			continue;
+	}
+	return 0;
+	
 }
