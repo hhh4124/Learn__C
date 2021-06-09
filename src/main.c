@@ -944,7 +944,7 @@ int main()
 */
 
 // 두 개의 정수를 입력 받아 두 수의 차를 출력하는 프로그램, 무조건 큰 수에서 작은 수를 빼야함 순서에 상관없이
-
+/*
 int main()
 {
 	int num1, num2;
@@ -959,6 +959,23 @@ int main()
 		printf("%d\n", num2-num1);
 	else
 		printf("0\n");
+	
+	return 0;
+}
+*/
+	
+
+//덧셈 함수 사용해보기
+
+int Add(int num1, int num2)
+{
+	return num1+num2;
+}
+int main()
+{
+	int result;
+	result = Add(3,4);
+	printf("%d\n", result);
 	
 	return 0;
 }
