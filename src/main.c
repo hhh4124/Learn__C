@@ -919,6 +919,7 @@ int main(){
 */
 
 // 1이상 100미만의 정수 중에 7의 배수와 9의 배수를 출력하는 프로그램, 7의 배수이면서 동시에 9의 배수인 정수는 한번만 출력
+/*
 int main()
 {
 	int i, num;
@@ -939,4 +940,25 @@ int main()
 	}
 	return 0;
 	
+}
+*/
+
+// 두 개의 정수를 입력 받아 두 수의 차를 출력하는 프로그램, 무조건 큰 수에서 작은 수를 빼야함 순서에 상관없이
+
+int main()
+{
+	int num1, num2;
+	
+	printf("두 수를 입력하세요.: \n");
+	
+	scanf("%d %d", &num1, &num2);
+	
+	if(num1>num2)
+		printf("%d\n", num1-num2);
+	else if(num1<num2)
+		printf("%d\n", num2-num1);
+	else
+		printf("0\n");
+	
+	return 0;
 }
