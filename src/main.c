@@ -966,6 +966,7 @@ int main()
 	
 
 //덧셈 함수 사용해보기
+/*
 
 int Add(int num1, int num2)
 {
@@ -977,5 +978,42 @@ int main()
 	result = Add(3,4);
 	printf("%d\n", result);
 	
+	return 0;
+}
+*/
+
+// 인자전달 유무, 반환 값 유무에 따른 각각 함수의 정리
+
+int Add(int num1, int num2) // 인자전달 O, 반환값 X
+{
+	return num1+num2;
+}
+
+
+void ShowAddResult(int num) // 인자전달 X, 반환값 O
+{
+	printf("덧셈결과출력: %d \n", num);
+}
+
+int ReadNum(void) // 인자전달 X, 반환값 O
+{
+	int num;
+	scanf("%d", &num);
+	return num;
+}
+
+void HowToUseThisProg(void) // 인자전달 X, 반환값 X
+{
+	printf("두 개의 정수를 입력하시면 덧셈결과가 출력됩니다. \n");
+}
+
+int main(void)
+{
+	int result, num1, num2;
+	HowToUseThisProg();
+	num1=ReadNum();
+	num2=ReadNum();
+	result = Add(num1, num2);
+	ShowAddResult(result);
 	return 0;
 }
