@@ -5,6 +5,8 @@
 #include <time.h>      // time 함수가 선언된 헤더 파일
 //#include <windows.h>    // sleep() 함수 사용을 위해 추가했으나 리눅스에서는 windows.h 가 없음, 오류 뜸
 #include <unistd.h> // 리눅스에서 sleep함수 사용, sleep(seconds), usleep(micro seconds)
+#include <string.h> // strcpy 함수가 선언된 헤더파일
+#define _CRT_SECURE_NO_WARNINGS    // strcpy 보안 경고로 인한 컴파일 에러 방지
 
 
 /* 
@@ -1020,7 +1022,7 @@ int main(void)
 */
 
 // 열거체 사용해보기 enum
-
+/*
 enum Week {
 	Sunday, Monday, Tuesday = 5, Wednesday
 };
@@ -1036,4 +1038,29 @@ int main()
 		
 	week = Sunday;
 	printf("%d\n", week);
+}
+*/
+
+//구조체 사용해보기 struct
+
+struct Student {
+	char name[20];
+	char gender;
+	int age;
+	char address[40];
+};
+
+int main()
+{
+	struct Student s1;
+	strcpy(s1.name, "현주");
+	s1.age = 25;
+	strcpy(s1.address, "부산광역시 남구 대연동");
+	s1.gender = 'W';
+	
+	printf("이름: %s\n", s1.name);       
+    printf("나이: %d\n", s1.age);        
+    printf("주소: %s\n", s1.address); 
+
+    return 0;
 }
