@@ -983,7 +983,7 @@ int main()
 */
 
 // 인자전달 유무, 반환 값 유무에 따른 각각 함수의 정리
-
+/*
 int Add(int num1, int num2) // 인자전달 O, 반환값 X
 {
 	return num1+num2;
@@ -1016,4 +1016,24 @@ int main(void)
 	result = Add(num1, num2);
 	ShowAddResult(result);
 	return 0;
+}
+*/
+
+// 열거체 사용해보기 enum
+
+enum Week {
+	Sunday, Monday, Tuesday = 5, Wednesday
+};
+
+int main()
+{
+	enum Week week;
+	week = Wednesday;
+	printf("%d\n", week);
+		
+	week = Tuesday;
+	printf("%d\n", week);
+		
+	week = Sunday;
+	printf("%d\n", week);
 }
