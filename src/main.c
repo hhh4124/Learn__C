@@ -1081,6 +1081,7 @@ int main()
 
 // C언어 정보처리기사 기출문제 풀어보기
 //Bubble Sort
+/*
 int main()
 {
 	int i, j;
@@ -1107,4 +1108,17 @@ int main()
 	
 	return 0;
 }
+*/
 
+int main()
+{
+	int i;
+	int a[4] = {0, 1, 2, 3};
+	
+	for(i=0; i<4; i++)
+	{
+		printf("%d ", a[i]);
+	}
+	
+	return 0;
+}
