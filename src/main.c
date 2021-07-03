@@ -1110,6 +1110,8 @@ int main()
 }
 */
 
+//배열 출력 해보기
+/*
 int main()
 {
 	int i;
@@ -1119,6 +1121,29 @@ int main()
 	{
 		printf("%d ", a[i]);
 	}
+	
+	return 0;
+}
+*/
+
+// switch case
+int main()
+{
+	int i = 3;
+	int k = 1;
+	
+	switch(i)
+	{
+		case 0:
+		case 1:
+		case 2:
+		case 3: k=0;
+		case 4: k+=3;
+		case 5: k-=10;
+		default: k--;
+	}
+	
+	printf("%d\n", k);
 	
 	return 0;
 }
