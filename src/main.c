@@ -1042,7 +1042,7 @@ int main()
 */
 
 //구조체 사용해보기 struct
-
+/*
 struct Student {
 	char name[20];
 	char gender;
@@ -1063,4 +1063,16 @@ int main()
     printf("주소: %s\n", s1.address); 
 
     return 0;
+}
+*/
+
+//포인터 사용해보기
+int main()
+{
+	int a = 11;
+	int* b = &a;
+	
+	printf("%d %d\n", a, *b);
+	
+	return 0;
 }
